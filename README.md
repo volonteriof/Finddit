@@ -1,2 +1,2 @@
 # Finddit
-Reddit search using reddit API
+Reddit search using Bootstrap and reddit API
