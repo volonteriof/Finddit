@@ -20,7 +20,6 @@ searchForm.addEventListener("submit", (e) => {
   // Search Reddit
   search(searchTerm, searchLimit, sortBy).then((results) => {
     let output = '<div class="card-columns">';
-    console.log(results);
     results.forEach((post) => {
       // Check for image
       let image = post.preview
