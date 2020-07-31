@@ -31,8 +31,7 @@ searchForm.addEventListener("submit", (e) => {
       <img class="card-img-top" src="${image}" alt="Card image">
       <div class="card-body">
         <h5 class="card-title"><a href="${post.url}" target="_blank" 
-        class="text-dark">${post.title}</a></h5>
-        <p class="card-text">${truncateString(post.selftext, 80)}</p>
+        class="text-dark">${truncateString(post.title, 140)}</a></h5>
         <hr>
         <span class="badge badge-secondary">
           <a href="https://reddit.com/${post.subreddit_name_prefixed}"
@@ -75,7 +74,7 @@ function showMessage(message, className) {
 function truncateString(myString, limit) {
   const shortened = myString.indexOf(" ", limit);
   if (shortened == -1) return myString;
-  return myString.substring(0, shortened);
+  return myString.substring(0, shortened) + "...";
 }
 
 function search(searchTerm, searchLimit, sortBy) {
