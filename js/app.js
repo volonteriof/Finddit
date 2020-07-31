@@ -28,14 +28,15 @@ searchForm.addEventListener("submit", (e) => {
         : "https://cdn.comparitech.com/wp-content/uploads/2017/08/reddit-1.jpg";
       output += `
       <div class="card mb-2">
-      <img class="card-img-top" src="${image}" alt="Card image cap">
+      <img class="card-img-top" src="${image}" alt="Card image">
       <div class="card-body">
-        <h5 class="card-title">${post.title}</h5>
-        <p class="card-text">${truncateString(post.selftext, 100)}</p>
-        <a href="${post.url}" target="_blank
-        " class="btn btn-primary">Read More</a>
+        <h5 class="card-title"><a href="${post.url}" target="_blank" 
+        class="text-dark">${post.title}</a></h5>
+        <p class="card-text">${truncateString(post.selftext, 80)}</p>
         <hr>
-        <span class="badge badge-secondary">Subreddit: ${post.subreddit}</span> 
+        <span class="badge badge-secondary">
+          <a href="https://reddit.com/${post.subreddit_name_prefixed}"
+          target="_blank" class="text-light">r/${post.subreddit}</a></span>
         <span class="badge badge-dark">Score: ${post.score}</span>
       </div>
     </div>
