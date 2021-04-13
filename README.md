@@ -1,2 +1,5 @@
 # Finddit
-Reddit search using Bootstrap and reddit API
+
+Custom Reddit search app using Bootstrap and reddit API
+
+[Live version](https://federicofinddit.netlify.app)
